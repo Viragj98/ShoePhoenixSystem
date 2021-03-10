@@ -14,6 +14,14 @@ public partial class AStaff : System.Web.UI.Page
 
     protected void btnOK_Click(object sender, EventArgs e)
     {
+        // create a new instance of clsStaff
+        clsStaff AStaff = new clsStaff();
+        // capture the saff id
+        AStaff.StaffID = txtStaffID.Text;
+        // store the details in the session object 
+        Session["AStaff"] = AStaff;
+        //redirect to the viewer page 
+        Response.Redirect("StaffViewer.aspx");
     }
 }
 
