@@ -150,6 +150,45 @@ namespace ShoePhoenixTesting
             Assert.AreEqual(AStock.DateAdded, TestData);
         }
 
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of class we want to create 
+            clsStock AStock = new clsStock();
+            //Boolean variable store results of validation
+            Boolean Found = false;
+            //create some test data use with method
+            Int32 ShoeId = 7;
+            //invoke the method
+            Found = AStock.Find(ShoeId);
+            //test to see if result is true
+            Assert.IsTrue(Found);
+
+        }
+
+        [TestMethod]
+        public void TestAddressNoFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ol
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check stock no
+            if (AStock.ShoeId != 7)
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
+        
+
 
 
 
