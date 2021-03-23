@@ -63,7 +63,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            Int32 TestData = 1234567894;
+            string TestData = "1234567894";
             //assign data to the property 
             AStaff.ContactNo = TestData;
             //test to see that if the two values are same 
@@ -111,5 +111,96 @@ namespace ShoePhoenixTesting
             Assert.AreEqual(AStaff.PostCode, TestData);
 
         }
+
+        [TestMethod]
+        public void FindMethodOK()
+
+        {
+            //create a instant of the class want to create 
+            clsStaff AStaff = new clsStaff();
+            // boolean variable to store the results of the validation 
+            Boolean Found = false;
+            //create some test data to test the find method
+            Int32 StaffID = 06;
+            //invoke the method 
+            Found = AStaff.Find(StaffID);
+            // tests to see if the results are true 
+            Assert.IsTrue(Found);
+            
+        }
+        [TestMethod]
+        public void TestStaffIDNoFound()
+
+        {
+            //create a instant of the class want to create 
+            clsStaff AStaff = new clsStaff();
+            // boolean variable to store the results of the validation 
+            Boolean Found = false;
+            //boolean variable to if the data is ok
+            Boolean OK = true;
+            //create some test data to test the find method
+            Int32 StaffID = 06;
+            //invoke the method 
+            Found = AStaff.Find(StaffID);
+            // check the staff id 
+            if (AStaff.StaffID != 06)
+            {
+                OK = false;
+            }
+            // tests to see if the results are true 
+            Assert.IsTrue(OK);
+
+        }
+
+        [TestMethod]
+        public void TestFirstNameFound()
+
+        {
+            //create a instant of the class want to create 
+            clsStaff AStaff = new clsStaff();
+            // boolean variable to store the results of the validation 
+            Boolean Found = false;
+            //boolean variable to if the data is ok
+            Boolean OK = true;
+            //create some test data to test the find method
+            Int32 StaffID = 06;
+            //invoke the method 
+            Found = AStaff.Find(StaffID);
+            // check the first name
+            if (AStaff.FirstName != "Mike")
+            {
+                OK = false;
+            }
+            // tests to see if the results are true 
+            Assert.IsTrue(OK);
+
+        }
+
+        [TestMethod]
+        public void TestLastNameFound()
+
+        {
+            //create a instant of the class want to create 
+            clsStaff AStaff = new clsStaff();
+            // boolean variable to store the results of the validation 
+            Boolean Found = false;
+            //boolean variable to if the data is ok
+            Boolean OK = true;
+            //create some test data to test the find method
+            Int32 StaffID = 06;
+            //invoke the method 
+            Found = AStaff.Find(StaffID);
+            // check thelastname 
+            if (AStaff.LastName != "Thurston")
+            {
+                OK = false;
+            }
+            // tests to see if the results are true 
+            Assert.IsTrue(OK);
+
+        }
+        
+
+       
     }
 }

@@ -187,33 +187,6 @@ namespace ShoePhoenixTesting
             //test to see result is correct
             Assert.IsTrue(OK);
         }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
