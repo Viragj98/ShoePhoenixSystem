@@ -187,26 +187,204 @@ namespace ShoePhoenixTesting
             //test to see result is correct
             Assert.IsTrue(OK);
         }
-        
 
+        [TestMethod]
+        public void TestShoeNameFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.ShoeName != "Test ShoeName")
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
+        [TestMethod]
+        public void TestShoeTypeFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.ShoeType != "Test ShoeType")
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
+        [TestMethod]
+        public void TestShoeSizeFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.ShoeSize != 3)
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
+        [TestMethod]
+        public void TestBrandFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.Brand != "Test Brand")
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
+        [TestMethod]
+        public void TestColourFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.Colour != "Test Colour")
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
+        [TestMethod]
+        public void TestQuantityFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.Quantity != 10)
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
+        [TestMethod]
+        public void TestPriceFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.Price != "Test Price")
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
+        [TestMethod]
+        public void TestDateAddedFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.DateAdded != Convert.ToDateTime("16/03/2020"))
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
-
-
-
-
-
-
-
-
-
-
+        [TestMethod]
+        public void TestInStockFound()
+        {
+            //create instance of the class
+            clsStock AStock = new clsStock();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //boolean variable to record if data is ok
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 ShoeId = 7;
+            //invoke method
+            Found = AStock.Find(ShoeId);
+            //check property
+            if (AStock.InStock != true)
+            {
+                OK = false;
+            }
+            //test to see result is correct
+            Assert.IsTrue(OK);
+        }
 
 
 
@@ -217,3 +395,30 @@ namespace ShoePhoenixTesting
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
