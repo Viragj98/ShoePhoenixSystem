@@ -167,7 +167,7 @@ namespace ShoePhoenixTesting
         }
 
         [TestMethod]
-        public void TestAddressNoFound()
+        public void TestShoeIdFound()
         {
             //create instance of the class
             clsStock AStock = new clsStock();
