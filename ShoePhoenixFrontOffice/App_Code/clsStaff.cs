@@ -9,5 +9,8 @@
     public string PostCode { get; set; }
     public object ContactNo { get; set; }
     public string City { get; set; }
-
+    public string Title { get; set; }
+    public string Gender { get; set; }
+    public string StartDate { get; set; }
+    public string EmployeeStatus { get; set; }
 }

@@ -15,14 +15,18 @@ public partial class StaffViewer : System.Web.UI.Page
         AStaff = (clsStaff)Session["AStaff"];
         //display the staff no for the entry 
         Response.Write(AStaff.StaffID);
+        Response.Write(AStaff.Title);
         Response.Write(AStaff.FirstName);
         Response.Write(AStaff.LastName);
+        Response.Write(AStaff.Gender);
         Response.Write(AStaff.Email);
         Response.Write(AStaff.Address1);
         Response.Write(AStaff.Address2);
         Response.Write(AStaff.ContactNo);
         Response.Write(AStaff.PostCode);
         Response.Write(AStaff.City);
+        Response.Write(AStaff.StartDate);
+        Response.Write(AStaff.EmployeeStatus);
 
     }
 }
