@@ -213,10 +213,10 @@ namespace ShoePhoenixClasses
 
 
         //private data memeber for the StartDate property 
-        private string mStartDate;
+        private DateTime mStartDate;
         //StartDate public property 
 
-        public string StartDate
+        public DateTime StartDate
         {
             get
             {
@@ -288,7 +288,7 @@ namespace ShoePhoenixClasses
             mCity = "London";
 
             //set the private data members to test the data value 
-            mStartDate = "12/04/2017";
+            mStartDate = Convert.ToDateTime ("01/05/2018");
 
             //set the private data members to test the data value 
             mEmployeeStatus = "True";

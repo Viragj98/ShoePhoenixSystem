@@ -161,7 +161,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = "12/04/2017";
+            DateTime TestData = DateTime.Now.Date;
             //assign data to the property 
             AStaff.StartDate = TestData;
             //test to see that if the two values are same 
@@ -485,7 +485,7 @@ namespace ShoePhoenixTesting
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check StartDate
-            if (AStaff.StartDate != "12/04/2017")
+            if (AStaff.StartDate != Convert.ToDateTime("01/05/2018"))
             {
                 OK = false;
             }
