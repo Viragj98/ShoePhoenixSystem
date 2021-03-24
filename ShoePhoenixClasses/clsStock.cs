@@ -1,4 +1,4 @@
-﻿using ClassLibrary;
+using ClassLibrary;
 using System;
 
 namespace ShoePhoenixClasses
