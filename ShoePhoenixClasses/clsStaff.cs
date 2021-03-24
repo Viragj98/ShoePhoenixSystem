@@ -291,7 +291,20 @@ namespace ShoePhoenixClasses
 
             
         }
-        
 
+        public string Valid(string title, string firstName, string lastName, string gender, string emailAddress, string contactNo, string address1, string address2, string postCode, string city, string startDate, bool employeeStatus)
+        {
+
+            //create a string variable to store the error 
+            String Error = "";
+            // if statement for firstname is blank 
+            if (firstName.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The First name cannot be blank : ";
+            }
+            //return any errors messages 
+            return Error;
+        }
     }
 }
