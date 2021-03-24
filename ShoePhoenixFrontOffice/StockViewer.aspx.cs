@@ -15,14 +15,16 @@ public partial class StockViewer : System.Web.UI.Page
         //get data from session objecy 
         AStock = (clsStock)Session["AStock"];
         //display shoe name for this entry 
+        Response.Write(AStock.ShoeID);
         Response.Write(AStock.ShoeName);
         Response.Write(AStock.ShoeType);
         Response.Write(AStock.ShoeSize);
-        //Response.Write(AStock.Brand);
+        Response.Write(AStock.Brand);
         Response.Write(AStock.Colour);
         Response.Write(AStock.Quantity);
         Response.Write(AStock.Price);
         Response.Write(AStock.InStock);
+        Response.Write(AStock.DateAdded);
        
     }
 }

@@ -8,4 +8,6 @@
     public string Quantity { get; set; }
     public string Price { get; set; }
     public string InStock { get; set; }
+    public string DateAdded { get; set; }
+    public string ShoeID { get; set; }
 }
