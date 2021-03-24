@@ -26,11 +26,16 @@
         <asp:Label ID="lblColour" runat="server" style="z-index: 1; left: 385px; top: 109px; position: absolute" Text="Colour"></asp:Label>
         <asp:Label ID="lblPrice" runat="server" style="z-index: 1; left: 391px; top: 149px; position: absolute" Text="Price"></asp:Label>
         <asp:Label ID="lblBrand" runat="server" style="z-index: 1; left: 36px; top: 153px; position: absolute" Text="Brand"></asp:Label>
-        <asp:DropDownList ID="ddlBrand" runat="server" style="z-index: 1; left: 107px; top: 154px; position: absolute; width: 165px">
-        </asp:DropDownList>
+        <asp:TextBox ID="txtBrand" runat="server" style="z-index: 1; left: 106px; top: 153px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtShoeType" runat="server" style="z-index: 1; left: 106px; top: 108px; position: absolute; width: 178px; margin-bottom: 0px"></asp:TextBox>
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 26px; top: 365px; position: absolute; height: 19px"></asp:Label>
-        <asp:CheckBox ID="chkInStock" runat="server" style="z-index: 1; left: 273px; top: 244px; position: absolute; width: 87px" Text="In Stock" />
+    
+       
+        <asp:TextBox ID="txtShoeID" runat="server" style="z-index: 1; left: 108px; top: 37px; position: absolute"></asp:TextBox>
+        <asp:Label ID="lblShoeID" runat="server" style="z-index: 1; left: 31px; top: 34px; position: absolute" Text="Shoe ID"></asp:Label>
+        <asp:CheckBox ID="chkInStock" runat="server" style="z-index: 1; left: 309px; top: 241px; position: absolute" Text="In Stock" />
+    
+       
     </form>
 </body>
 </html>

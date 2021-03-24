@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShoePhoenixClasses;
 
@@ -18,16 +18,16 @@ namespace ShoePhoenixTesting
         }
 
         [TestMethod]
-        public void ShoeIdPropertyOK()
+        public void ShoeIDPropertyOK()
 
         {
             //create a instant of the class want to create 
             clsStock AStock = new clsStock();
             // create the test data to assign to the property 
-            Int32 TestData = 1;
-            AStock.ShoeId = TestData;
+            Int32 TestData = 7;
+            AStock.ShoeID = TestData;
             //test to see that if the two values are same 
-            Assert.AreEqual(AStock.ShoeId, TestData);
+            Assert.AreEqual(AStock.ShoeID, TestData);
         }
 
         [TestMethod]
@@ -117,7 +117,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStock AStock = new clsStock();
             // create the test data to assign to the property 
-            string TestData = "70.00";
+            string TestData = "£75.00";
             AStock.Price = TestData;
             //test to see that if the two values are same 
             Assert.AreEqual(AStock.Price, TestData);
@@ -158,16 +158,15 @@ namespace ShoePhoenixTesting
             //Boolean variable store results of validation
             Boolean Found = false;
             //create some test data use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke the method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //test to see if result is true
             Assert.IsTrue(Found);
-
         }
 
         [TestMethod]
-        public void TestShoeIdFound()
+        public void TestShoeIDFound()
         {
             //create instance of the class
             clsStock AStock = new clsStock();
@@ -176,11 +175,11 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ol
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check stock no
-            if (AStock.ShoeId != 7)
+            if (AStock.ShoeID != 7)
             {
                 OK = false;
             }
@@ -198,11 +197,11 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
-            if (AStock.ShoeName != "Test ShoeName")
+            if (AStock.ShoeName != "Nike Air Max 97")
             {
                 OK = false;
             }
@@ -220,11 +219,11 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
-            if (AStock.ShoeType != "Test ShoeType")
+            if (AStock.ShoeType != "Trainer")
             {
                 OK = false;
             }
@@ -242,9 +241,9 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
             if (AStock.ShoeSize != 3)
             {
@@ -264,11 +263,11 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
-            if (AStock.Brand != "Test Brand")
+            if (AStock.Brand != "Nike")
             {
                 OK = false;
             }
@@ -286,11 +285,11 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
-            if (AStock.Colour != "Test Colour")
+            if (AStock.Colour != "White")
             {
                 OK = false;
             }
@@ -308,9 +307,9 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
             if (AStock.Quantity != 10)
             {
@@ -330,11 +329,11 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
-            if (AStock.Price != "Test Price")
+            if (AStock.Price != "£75.00")
             {
                 OK = false;
             }
@@ -352,11 +351,11 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
-            if (AStock.DateAdded != Convert.ToDateTime("16/03/2020"))
+            if (AStock.DateAdded !=Convert.ToDateTime("23/03/2021"))
             {
                 OK = false;
             }
@@ -374,9 +373,9 @@ namespace ShoePhoenixTesting
             //boolean variable to record if data is ok
             Boolean OK = true;
             //create some test data to use with method
-            Int32 ShoeId = 7;
+            Int32 ShoeID = 7;
             //invoke method
-            Found = AStock.Find(ShoeId);
+            Found = AStock.Find(ShoeID);
             //check property
             if (AStock.InStock != true)
             {
@@ -393,32 +392,26 @@ namespace ShoePhoenixTesting
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

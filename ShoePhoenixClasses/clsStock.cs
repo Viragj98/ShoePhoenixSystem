@@ -1,22 +1,23 @@
-﻿using System;
+using ClassLibrary;
+using System;
 
 namespace ShoePhoenixClasses
 {
     public class clsStock
     {
         //private member for shoe no property
-        private Int32 mShoeId;
-        public Int32 ShoeId
+        private Int32 mShoeID;
+        public Int32 ShoeID
         {
             get
             {
                 //this line of code sends data out of property
-                return mShoeId;
+                return mShoeID;
             }
             set
             {
                 //this line of code allows data into property
-                mShoeId = value;
+                mShoeID = value;
             }
         }
 
@@ -180,20 +181,37 @@ namespace ShoePhoenixClasses
             }
         }
 
-        public bool Find(int ShoeId)
+        public bool Find(int ShoeID)
         {
-            mShoeId = 7;
-            mShoeName = "Test ShoeName";
-            mShoeType = "Test ShoeType";
-            mShoeSize = 3;
-            mBrand = "Test Brand";
-            mColour = "Test Colour";
-            mQuantity = 10;
-            mPrice = "Test Price";
-            mInStock = true;
-            mDateAdded = Convert.ToDateTime("16/03/2020");
-            //always return true
-            return true;
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add para for shoe id to to search for
+            DB.AddParameter("@ShoeID", ShoeID);
+            //execute stored proc
+            DB.Execute("sproc_tblShoe_FilterByShoeID");
+            //if one recordis found (either one or zero)
+            if (DB.Count ==1)
+            {
+                //copy data from database to private data members
+                mShoeID = Convert.ToInt32(DB.DataTable.Rows[0]["ShoeID"]);
+                mShoeName = Convert.ToString(DB.DataTable.Rows[0]["ShoeName"]);
+                mShoeType = Convert.ToString(DB.DataTable.Rows[0]["ShoeType"]);
+                mShoeSize = Convert.ToInt32(DB.DataTable.Rows[0]["ShoeSize"]);
+                mBrand = Convert.ToString(DB.DataTable.Rows[0]["Brand"]);
+                mColour = Convert.ToString(DB.DataTable.Rows[0]["Colour"]);
+                mQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["Quantity"]);
+                mPrice = Convert.ToString(DB.DataTable.Rows[0]["Price"]);
+                mInStock = Convert.ToBoolean(DB.DataTable.Rows[0]["InStock"]);
+                mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                return true;
+            }
+            //if record not found
+            else
+            {
+                //return false = problem
+                return false;
+            }
+
         }
     }
 }
