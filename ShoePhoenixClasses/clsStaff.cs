@@ -233,10 +233,10 @@ namespace ShoePhoenixClasses
 
 
         //private data memeber for the EmployeeStatus property 
-        private string mEmployeeStatus;
+        private Boolean mEmployeeStatus;
         //EmployeeStatus public property 
 
-        public string EmployeeStatus
+        public Boolean EmployeeStatus
         {
             get
             {
@@ -253,48 +253,43 @@ namespace ShoePhoenixClasses
 
 
         public bool Find(int StaffID)
-        {    // set the private data members to the test data value 
-            mStaffID = 06;
 
-            //set the private data members to test the data value 
-            mTitle = "Mr";
+        {
+            // create an instance of data connection 
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameters for the staff id to search for 
+            DB.AddParameter("@StaffID", StaffID);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblStaff_FilterByStaffID");
+            // if records are found then value must present 1 or 0
+            if (DB.Count == 1)
+            {
+                //copythe data from the database form the private data members
+                mStaffID = Convert.ToInt32(DB.DataTable.Rows[0]["StaffID"]);
+                mTitle = Convert.ToString(DB.DataTable.Rows[0]["Title"]);
+                mFirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                mLastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
+                mGender = Convert.ToString(DB.DataTable.Rows[0]["Gender"]);
+                mEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
+                mContactNo = Convert.ToString(DB.DataTable.Rows[0]["ContactNo"]);
+                mAddress1 = Convert.ToString(DB.DataTable.Rows[0]["Address1"]);
+                mAddress2 = Convert.ToString(DB.DataTable.Rows[0]["Address2"]);
+                mPostCode = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
+                mCity = Convert.ToString(DB.DataTable.Rows[0]["City"]);
+                mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["StartDate"]);
+                mEmployeeStatus = Convert.ToBoolean(DB.DataTable.Rows[0]["EmployeeStatus"]);
 
-            //set the private data members to test the data value 
-            mFirstName = "Mike";
+                // always return true
+                return true;
+            }
+            //if no record was found 
+            else
+            {
+                //return false indicating a problem 
+                return false;
+            }
 
-            //set the private data members to test the data value 
-            mLastName = "Thurston";
-
-            //set the private data members to test the data value 
-            mGender = "Male";
-
-            //set the private data members to test the data value 
-            mEmailAddress = "Smith.john@gmail.com";
-
-            //set the private data members to test the data value 
-            mContactNo = "1234567894";
-
-            //set the private data members to test the data value 
-            mAddress1 = "5th Kite Road";
-
-            //set the private data members to test the data value 
-            mAddress2 = "Leicester";
-
-            //set the private data members to test the data value 
-            mPostCode = "LE1 1LE";
-
-
-            //set the private data members to test the data value 
-            mCity = "London";
-
-            //set the private data members to test the data value 
-            mStartDate = Convert.ToDateTime ("01/05/2018");
-
-            //set the private data members to test the data value 
-            mEmployeeStatus = "True";
-
-            // always return true
-            return true;
+            
         }
         
 

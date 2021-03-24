@@ -16,6 +16,19 @@ namespace ShoePhoenixTesting
             //test to see that if it exists 
             Assert.IsNotNull(AStaff);
         }
+
+        [TestMethod]
+        public void StaffIDPropertyOK()
+
+        {
+            //create a instant of the class want to create 
+            clsStaff AStaff = new clsStaff();
+            // create the test data to assign to the property 
+            Int32 TestData = 2;
+            AStaff.StaffID = TestData;
+            //test to see that if the two values are same 
+            Assert.AreEqual(AStaff.StaffID, TestData);
+        }
         [TestMethod]
         public void TitlePropertyOK()
 
@@ -36,7 +49,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = "John";
+            string TestData = "Mike";
             AStaff.FirstName = TestData;
             //test to see that if the two values are same 
             Assert.AreEqual(AStaff.FirstName, TestData);
@@ -48,7 +61,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = "Smith";
+            string TestData = "Thurston";
             //assign data to the property 
             AStaff.LastName = TestData;
             //test to see that if the two values are same 
@@ -76,7 +89,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = "Smith.john@gmail.com";
+            string TestData = "mike.t@gmu.com";
             //assign data to the property 
             AStaff.EmailAddress = TestData;
             //test to see that if the two values are same 
@@ -90,7 +103,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = "1234567894";
+            string TestData = "07856985636";
             //assign data to the property 
             AStaff.ContactNo = TestData;
             //test to see that if the two values are same 
@@ -103,7 +116,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = " 5th Kite Road";
+            string TestData = "45 John Road";
             //assign data to the property 
             AStaff.Address1 = TestData;
             //test to see that if the two values are same 
@@ -117,7 +130,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = " Leicester";
+            string TestData = "Street Avenue";
             //assign data to the property 
             AStaff.Address2 = TestData;
             //test to see that if the two values are same 
@@ -131,7 +144,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = " LE1 1LE";
+            string TestData = "LE44 8UJ";
             //assign data to the property 
             AStaff.PostCode = TestData;
             //test to see that if the two values are same 
@@ -146,7 +159,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = " London";
+            string TestData = "London";
             //assign data to the property 
             AStaff.City = TestData;
             //test to see that if the two values are same 
@@ -176,7 +189,7 @@ namespace ShoePhoenixTesting
             //create a instant of the class want to create 
             clsStaff AStaff = new clsStaff();
             // create the test data to assign to the property 
-            string TestData = "True";
+            Boolean TestData = true;
             //assign data to the property 
             AStaff.EmployeeStatus = TestData;
             //test to see that if the two values are same 
@@ -193,7 +206,7 @@ namespace ShoePhoenixTesting
             // boolean variable to store the results of the validation 
             Boolean Found = false;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // tests to see if the results are true 
@@ -212,11 +225,11 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check the staff id 
-            if (AStaff.StaffID != 06)
+            if (AStaff.StaffID != 2)
             {
                 OK = false;
             }
@@ -237,7 +250,7 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check Title
@@ -261,7 +274,7 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check the first name
@@ -285,7 +298,7 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check thelastname 
@@ -309,7 +322,7 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check the gender
@@ -333,11 +346,11 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check emailaddress
-            if (AStaff.EmailAddress != "Smith.john@gmail.com")
+            if (AStaff.EmailAddress != "mike.t@gmu.com")
             {
                 OK = false;
             }
@@ -358,11 +371,11 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check conctactno 
-            if (AStaff.ContactNo != "1234567894")
+            if (AStaff.ContactNo != "07856985636")
             {
                 OK = false;
             }
@@ -383,11 +396,11 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check address1
-            if (AStaff.Address1 != "5th Kite Road")
+            if (AStaff.Address1 != "45 John Road")
             {
                 OK = false;
             }
@@ -409,11 +422,11 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check address2 
-            if (AStaff.Address2 != "Leicester")
+            if (AStaff.Address2 != "Street Avenue")
             {
                 OK = false;
             }
@@ -433,11 +446,11 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check postcode
-            if (AStaff.PostCode != "LE1 1LE")
+            if (AStaff.PostCode != "LE44 8UJ")
             {
                 OK = false;
             }
@@ -457,7 +470,7 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check city
@@ -481,11 +494,11 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check StartDate
-            if (AStaff.StartDate != Convert.ToDateTime("01/05/2018"))
+            if (AStaff.StartDate != Convert.ToDateTime("12/01/2014"))
             {
                 OK = false;
             }
@@ -505,11 +518,11 @@ namespace ShoePhoenixTesting
             //boolean variable to if the data is ok
             Boolean OK = true;
             //create some test data to test the find method
-            Int32 StaffID = 06;
+            Int32 StaffID = 2;
             //invoke the method 
             Found = AStaff.Find(StaffID);
             // check EmployeeStatus
-            if (AStaff.EmployeeStatus != "True")
+            if (AStaff.EmployeeStatus != true)
             {
                 OK = false;
             }
