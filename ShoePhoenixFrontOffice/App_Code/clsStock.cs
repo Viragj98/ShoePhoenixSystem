@@ -17,4 +17,9 @@ public class clsStock
     {
         return true;
     }
+
+    public string Valid(string shoeName, string shoeType, string shoeSize, string brand, string colour, string quantity, string price, string dateAdded)
+    {
+        throw new NotImplementedException();
+    }
 }

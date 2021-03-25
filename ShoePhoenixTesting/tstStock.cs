@@ -526,9 +526,7 @@ namespace ShoePhoenixTesting
             //invoke the method
             Error = AStock.Valid(ShoeName, ShoeType, ShoeSize, Brand, Colour, Quantity, Price, DateAdded);
             //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-
-
+            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
