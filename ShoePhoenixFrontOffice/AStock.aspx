@@ -32,8 +32,8 @@
     
        
         <asp:TextBox ID="txtShoeID" runat="server" style="z-index: 1; left: 108px; top: 37px; position: absolute"></asp:TextBox>
-        <asp:Label ID="lblShoeID" runat="server" style="z-index: 1; left: 31px; top: 34px; position: absolute" Text="Shoe ID"></asp:Label>
-        <asp:CheckBox ID="chkInStock" runat="server" style="z-index: 1; left: 309px; top: 241px; position: absolute" Text="In Stock" />
+        <asp:Label ID="lblShoeID" runat="server" style="z-index: 1; left: 29px; top: 38px; position: absolute" Text="Shoe ID"></asp:Label>
+        <asp:Button ID="btnFind" runat="server" OnClick="btnFind_Click" style="z-index: 1; left: 52px; top: 302px; position: absolute; width: 64px" Text="Find" />
     
        
     </form>
