@@ -1,4 +1,3 @@
-using ClassLibrary;
 using System;
 
 namespace ShoePhoenixClasses
@@ -211,6 +210,126 @@ namespace ShoePhoenixClasses
                 //return false = problem
                 return false;
             }
+
+        }
+
+        public string Valid(string shoeName, string shoeType, string shoeSize, string brand, string colour, string quantity, string price, string dateAdded)
+        {
+            //create string variable to store error
+            String Error = "";
+            //create temporary variable to store date values
+            DateTime DateTemp;
+
+            //if shoe name is blank 
+            if(shoeName.Length == 0)
+            { 
+                //record error 
+                Error = Error + "The Shoe Name may not be blank :  ";
+            }
+
+            //if shoe name is greater than 31
+            if (shoeName.Length > 31)
+            {
+                Error = Error + "The Shoe Name must be less than 31 characters : ";
+            }
+            
+
+            try
+            {
+                //copy dateadded value to datetemp variable
+                DateTemp = Convert.ToDateTime(dateAdded);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record error
+                    Error = Error + "The Date cannot be in the past : ";
+                }
+
+                //check to see if the date is greater than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The Date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                //record error
+                Error = Error + "The Date was not a valid date : ";
+            }
+
+
+            //if shoe type is blank
+            if (shoeType.Length == 0)
+            {
+                Error = Error + "The Shoe Type may not be blank : ";
+            }
+            //if shoe type is greater than 31
+            if (shoeType.Length > 31)
+            {
+                Error = Error + "The Shoe Type must be less than 31 characters : ";
+            }
+            //if shoe size is blank
+            if (shoeSize.Length == 0)
+            {
+                Error = Error + "The Shoe Size may not be blank : ";
+            }
+            //if shoe size is greater than 31
+            if (shoeSize.Length > 31)
+            {
+                Error = Error + "The Shoe Size must be less than 31 characters : ";
+            }
+            //if brand is blank
+            if (brand.Length == 0)
+            {
+                Error = Error + "The Brand may not be blank : ";
+            }
+            //if brand is greater than 31
+            if (brand.Length > 31)
+            {
+                Error = Error + "The Brand must be less than 31 characters : ";
+            }
+            //if colour is blank
+            if (colour.Length == 0)
+            {
+                Error = Error + "The Brand may not be blank : ";
+            }
+            //if colour is greater than 31
+            if (colour.Length > 31)
+            {
+                Error = Error + "The Brand must be less than 31 characters : ";
+            }
+
+            //if quantity is blank
+            if (quantity.Length == 0)
+            {
+                Error = Error + "The Quantity may not be blank : ";
+            }
+            //if quantity is greater than 31
+            if (quantity.Length > 31)
+            {
+                Error = Error + "The Quantity must be less than 31 characters : ";
+            }
+
+            //if quantity is blank
+            if (price.Length == 0)
+            {
+                Error = Error + "The Price may not be blank : ";
+            }
+            //if quantity is greater than 31
+            if (price.Length > 31)
+            {
+                Error = Error + "The Price must be less than 31 characters : ";
+            }
+
+
+
+
+
+
+            //return error message 
+            return Error;
+
+
 
         }
     }
