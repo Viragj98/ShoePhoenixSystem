@@ -28,8 +28,8 @@
         <asp:TextBox ID="txtFirstName" runat="server" style="z-index: 1; left: 224px; top: 383px; position: absolute; right: 1629px;"></asp:TextBox>
         <asp:Label ID="lblLastName" runat="server" style="z-index: 1; left: 615px; top: 333px; position: absolute; width: 180px;" Text="Last Name"></asp:Label>
         <img class="auto-style1" longdesc="http://localhost:58901/Logo.jpg" src="Logo.jpg" /><asp:TextBox ID="txtLastName" runat="server" style="z-index: 1; left: 595px; top: 376px; position: absolute"></asp:TextBox>
-        <asp:Label ID="lblEmail" runat="server" style="z-index: 1; left: 227px; top: 518px; position: absolute" Text="Email"></asp:Label>
-        <asp:TextBox ID="txtEmail" runat="server" style="z-index: 1; left: 228px; top: 568px; position: absolute; width: 472px;"></asp:TextBox>
+        <asp:Label ID="lblEmailAddress" runat="server" style="z-index: 1; left: 227px; top: 518px; position: absolute" Text="Email"></asp:Label>
+        <asp:TextBox ID="txtEmailAddress" runat="server" style="z-index: 1; left: 228px; top: 568px; position: absolute; width: 472px;"></asp:TextBox>
         <asp:Label ID="lblContactNo" runat="server" style="z-index: 1; left: 229px; top: 609px; position: absolute; bottom: 721px; width: 132px;" Text="Contact No"></asp:Label>
         <asp:TextBox ID="txtContactNo" runat="server" style="z-index: 1; left: 225px; top: 661px; position: absolute"></asp:TextBox>
         <asp:Label ID="lblAddress1" runat="server" style="z-index: 1; left: 224px; top: 717px; position: absolute" Text="Address 1"></asp:Label>

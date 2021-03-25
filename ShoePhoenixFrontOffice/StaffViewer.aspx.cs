@@ -19,7 +19,7 @@ public partial class StaffViewer : System.Web.UI.Page
         Response.Write(AStaff.FirstName);
         Response.Write(AStaff.LastName);
         Response.Write(AStaff.Gender);
-        Response.Write(AStaff.Email);
+        Response.Write(AStaff.EmailAddress);
         Response.Write(AStaff.Address1);
         Response.Write(AStaff.Address2);
         Response.Write(AStaff.ContactNo);

@@ -297,14 +297,215 @@ namespace ShoePhoenixClasses
 
             //create a string variable to store the error 
             String Error = "";
+            // created a temp datetime variable 
+            DateTime DateTemp;
             // if statement for firstname is blank 
             if (firstName.Length == 0)
             {
                 //record the error 
                 Error = Error + "The First name cannot be blank : ";
             }
+
+            // if the firstname is greater than 15 characters 
+            if (firstName.Length > 15)
+            {
+                // record the error 
+                Error = Error + "The First name must be less than 15 characters : ";
+            }
+
+            // last name 
+            
+            // if statement for lastname is blank 
+            if (lastName.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The Last name cannot be blank : ";
+            }
+
+            // if the last name is greater than 15 characters 
+            if (lastName.Length > 15)
+            {
+                // record the error 
+                Error = Error + "The last name must be less than 15 characters : ";
+            }
+
+            // title
+
+            // if statement for title is blank 
+            if (title.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The Title cannot be blank : ";
+            }
+
+            // if the title is greater than 15 characters 
+            if (title.Length > 5)
+            {
+                // record the error 
+                Error = Error + "The title must be less than 5 characters : ";
+            }
+
+            // Gender
+
+            // if statement for Gender is blank 
+            if (gender.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The Gender cannot be blank : ";
+            }
+
+            // if the Gender is greater than 10 characters 
+            if (gender.Length > 10)
+            {
+                // record the error 
+                Error = Error + "The Gender must be less than 10 characters : ";
+            }
+
+
+            // email address
+
+            // if statement for email address is blank 
+            if (emailAddress.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The Email address cannot be blank : ";
+            }
+
+            // if the email is greater than 50 characters 
+            if (emailAddress.Length > 50)
+            {
+                // record the error 
+                Error = Error + "The email must be less than 50 characters : ";
+            }
+
+
+            // ContactNo
+
+            // if statement for ContactNo is blank 
+            if (contactNo.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The ContactNo cannot be blank : ";
+            }
+          /*      // if the contact no is at mid range 
+                if (contactNo.Length <= 11)
+                {
+                    // record the error 
+                    Error = Error + "The ContactNo must be 12 characters : ";
+                }
+            */
+
+            // if the ContactNo is greater than 12 characters 
+            if (contactNo.Length  >  12)
+            {
+                // record the error 
+                Error = Error + "The ContactNo must be 12 characters : ";
+            }
+
+
+            // address1
+
+            // if statement for address1 is blank 
+            if (address1.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The address1 cannot be blank : ";
+            }
+
+            // if the address1 is greater than 50 characters 
+            if (address1.Length > 50)
+            {
+                // record the error 
+                Error = Error + "The address1 must be less than 50 characters : ";
+            }
+
+
+            // address2
+
+            // if statement for address2 is blank 
+            if (address2.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The address2 cannot be blank : ";
+            }
+
+            // if the address2 is greater than 50 characters 
+            if (address2.Length > 50)
+            {
+                // record the error 
+                Error = Error + "The address2 must be less than 50 characters : ";
+            }
+
+            // postCode
+
+            // if statement for postCode is blank 
+            if (postCode.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The postCode cannot be blank : ";
+            }
+
+            // if the postCode is greater than 9 characters 
+            if (postCode.Length > 9)
+            {
+                // record the error 
+                Error = Error + "The postCode must be less than 9 characters : ";
+            }
+
+
+            // city
+
+            // if statement for city is blank 
+            if (city.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The city cannot be blank : ";
+            }
+
+            // if the city is greater than 20 characters 
+            if (city.Length > 20)
+            {
+                // record the error 
+                Error = Error + "The city must be less than 20 characters : ";
+            }
+
+            try
+            {
+
+                // copy the start date value to the datetemp varialbe 
+                DateTemp = Convert.ToDateTime(startDate);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    // record the error 
+                    Error = Error + "The Date cannot be in the past : ";
+
+                }
+
+                // check if the date is greater than todays date 
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    // record the error 
+                    Error = Error + "The Date cannot be in the future : ";
+
+                }
+            }
+            catch
+            {
+                // record the error 
+                Error = Error + "The date was in not a valid date : ";
+            }
+
+
+
+
             //return any errors messages 
             return Error;
         }
+
+
+
+            
+
+        
     }
 }
