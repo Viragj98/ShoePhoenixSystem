@@ -22,4 +22,7 @@ public class clsStock
     {
         throw new NotImplementedException();
     }
+
+    //hehehehe
+
 }
